@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Prism.js & Reveal.js</title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/black.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="prism/prism.css">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h2>Prism.js & Reveal.js</h2>
+				<p>This example shows how to using prism.js code highlighting in a reveal.js presentation.
+				</p>
+			</section>
+			<section data-auto-animate>
+				<h2 data-id="code-title">SPARQL example</h2>
+				<pre><code class="language-sparql">
+	SELECT ?class (COUNT(DISTINCT ?p) as ?NoP)
+
+	WHERE {
+	?s a ?class ;
+	?p ?o .
+	FILTER STRSTARTS(STR(?class), "http://data.europa.eu/a4g/ontology#")
+	}
+
+	ORDER BY DESC(?NoP)
+	LIMIT 10
+					</code></pre>
+				<p>Code syntax highlighting courtesy of <a href="https://prismjs.com/">prism.js</a>.</p>
+			</section>
+		</div>
+	</div>
+
+	<script src="dist/reveal.js"></script>
+	<script src="prism/prism.js"></script>
+	<script>
+		Reveal.initialize({
+			hash: true
+		});
+	</script>
+</body>
+
+</html>
