@@ -36,3 +36,7 @@ pre[class*="language-"] {
 ```
 
 And no other margins or paddings defined. This is not how you will download the css file from the prism website. So you'll need to adapt the file a little bit in order to make the code block look nice on a reveal presentation. The code block above comes from the highlight.js [built-in plugin of reveal](https://revealjs.com/code/).
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
